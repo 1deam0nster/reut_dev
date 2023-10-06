@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html onclick="getFocus()" onload="getFocus()">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Terminal Styled Website">
+    <meta name="author" content="Nathaniel Macapinlac">
+    <title>nasan | Terminal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d5effce557.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./assets/terminal.png">
+
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+    <style type="text/css">
+      body { 
+        visibility: hidden;
+        padding-top: 60px;
+      }
+    </style>
+</head>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="#">REUT</a>
+        <div class="nav-collapse collapse">
+          <!-- <p class="navbar-text pull-right">
+            Logged in as <a href="#" class="navbar-link">Username</a>
+          </p> -->
+          <ul class="nav">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li class="active"><a href="contact.html">Контакты</a></li>
+            <li><a href="cv.html">CV</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+<body onload="writeLines(contact, '', 50)">
+    <div class="stuff lead">
+        <main id="main" class="inner fullheight">
+            <div id="terminal">
+                <!-- <p><span class="stark"><span class="lightpurple">guest21</span>@<span class="jewel">nasan.dev</span>:$ ~ </span></p> -->
+                <a id="writingLines"></a>
+            </div>
+            <p id="passwordLine" class="hidden">[sudo] password for nasan: <input type='password' spellcheck='false' autocomplete='off' id='enterpassword' onkeypress='password(event)'></input><br><br></p>
+            <div id="commands">
+            <p><span class="stark"><span class="lightpurple">guest</span>@<span class="jewel">nasan.dev</span>:$ ~ </span>
+                <input spellcheck="false" autocomplete="off" id="user_cmd" onkeydown="historyScroll(event)" onkeypress="enterCommand(event)"></input>
+            </p>
+            </div>
+        </main>
+    </div>
+    <script src="../assets/bootstrap/js/jquery.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap-386.js"></script>
+    <script src=".\js\variables.js"></script>
+    <script src=".\js\main.js"></script>
+</body>
+</html>
